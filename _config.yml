@@ -1,69 +1,67 @@
-title:            Site Title
-description:      Describe your website here.
-disqus_shortname: hpstrtheme
-reading_time:     true
-words_per_minute: 200
-# Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
-# When testing locally leave blank or use http://localhost:4000
-url:
+# This is duplicated here from configs/mydoc/config_designers.yml so that Github Pages can read it. Github Pages requires this file for the build process. It can't read a configuration file stored in another location.
 
-# Owner/author information
-owner:
-  name:           Your Name
-  avatar:         avatar.jpg
-  bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
-  email:          you@email.com
-  # Social networking links used in footer. Update and remove as you like.
-  twitter:        
-  facebook:       
-  github:         
-  stackexchange:  
-  linkedin:       
-  instagram:      
-  flickr:         
-  tumblr:         
-  # google plus id, include the '+', eg +mmistakes
-  google_plus:    +yourid
+# project definitions
+project: mydoc_designers
+audience: designers
+product: doc
+platform: all
+version: all
+output: web
+destination: ../doc_outputs/mydoc/designers
+topnav_title: Jekyll Documentation Theme
+homepage_title: Jekyll doc theme for designers
+site_title: Jekyll theme for designers
+project_folder: mydoc
+company_name: Your company
+footer_image_location: ../common_images/company_logo.png
+github_editme_path: tomjohnson1492/documentation-theme-jekyll/edit/reviews
+disqus_shortname: idrbwjekyll
+# variables
 
-# Background image to be tiled on all pages
-background: 
+sidebar_tagline: Designers
+sidebar_version: Version 4.0
+theme_file: theme-blue.css
+pdf_file_name: mydoc_designers_pdf.pdf
 
-# Analytics and webmaster tools stuff goes here
-google_analytics:   
-google_verify:      
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:         
+port: 4009
 
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
-future:      true
+exclude:
+  - _site
+  - _drafts
+  - configs/
+  - doc/mydoc_writers*
+
+# same for all
+host: 127.0.0.1
+feedback_email: tomjohnson1492@gmail.com
+
+markdown: redcarpet
+
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "tables", "with_toc_data"]
+
 highlighter: pygments
-markdown:    kramdown
-gems:
-  - jekyll-sitemap
-sass:
-  sass_dir: _sass
-  style: compressed
 
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title/
+collections:
+  tooltips:
+    output: false
 
-# Amount of post to show on home page
-paginate: 5
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+      comments: true
+      search: true
+  -
+    scope:
+      path: ""
+      type: "tooltips"
+    values:
+      layout: "page"
+      comments: true
+      search: true
+      tooltip: true
 
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: true
-
-  coderay:
-    coderay_line_numbers: nil
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
-
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
