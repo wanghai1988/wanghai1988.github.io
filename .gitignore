@@ -1,3 +1,4 @@
-_site/
-.sass-cache/
-.idea
+.ruby-version
+.sass-cache
+_site
+.jekyll-metadata
